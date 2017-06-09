@@ -1,0 +1,130 @@
+<!--<ion-header>
+  <ion-navbar><button ion-button menuToggle>
+    <ion-icon name="menu"></ion-icon>
+</button>
+    <ion-title>Quran</ion-title>
+  </ion-navbar>
+</ion-header>
+
+ 
+
+<ion-content>
+  <ion-list>
+    <ion-list-header>Follow us on Twitter</ion-list-header>
+    <ion-item>
+      <ion-icon name="ionic" item-left></ion-icon>
+      @ionicframework
+    </ion-item>
+  </ion-list>
+</ion-content>-->
+
+<ion-header>
+    <ion-navbar no-border-bottom>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>
+            Quran
+        </ion-title>
+    </ion-navbar>
+
+    <ion-toolbar no-border-top>
+        <ion-segment [(ngModel)]="taboptionss">
+            <ion-segment-button value="Quran">
+                Quran
+            </ion-segment-button>
+            <ion-segment-button value="Audio">
+                Audio
+            </ion-segment-button>
+            <ion-segment-button value="Video">
+                Video
+            </ion-segment-button>
+        </ion-segment>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div [ngSwitch]="taboptionss">
+        <ion-list *ngSwitchCase="'Quran'">
+            <ion-item>
+                <ion-thumbnail item-start>
+                    <img src="https://ionicframework.com/dist/preview-app/www/assets/img/thumbnail-puppy-1.jpg">
+                </ion-thumbnail>
+                <h2>Ruby</h2>
+            </ion-item>
+            <ion-item>
+                <ion-thumbnail item-start>
+                    <img src="https://ionicframework.com/dist/preview-app/www/assets/img/thumbnail-puppy-2.jpg">
+                </ion-thumbnail>
+                <h2>Oscar</h2>
+            </ion-item>
+            <ion-item>
+                <ion-thumbnail item-start>
+                    <img src="https://ionicframework.com/dist/preview-app/www/assets/img/thumbnail-puppy-4.jpg">
+                </ion-thumbnail>
+                <h2>Zoey</h2>
+            </ion-item>
+            <ion-item>
+                <ion-thumbnail item-start>
+                    <img src="https://ionicframework.com/dist/preview-app/www/assets/img/thumbnail-puppy-3.jpg">
+                </ion-thumbnail>
+                <h2>Otto</h2>
+            </ion-item>
+        </ion-list>
+
+        <ion-list *ngSwitchCase="'Audio'">
+            <ion-item>
+                <ion-thumbnail item-start>
+                    <img src="https://ionicframework.com/dist/preview-app/www/assets/img/thumbnail-kitten-1.jpg">
+                </ion-thumbnail>
+                <h2>Luna</h2>
+            </ion-item>
+            <ion-item>
+                <ion-thumbnail item-start>
+                    <img src="https://ionicframework.com/dist/preview-app/www/assets/img/thumbnail-kitten-3.jpg">
+                </ion-thumbnail>
+                <h2>Milo</h2>
+            </ion-item>
+            <ion-item>
+                <ion-thumbnail item-start>
+                    <img src="https://ionicframework.com/dist/preview-app/www/assets/img/thumbnail-kitten-4.jpg">
+                </ion-thumbnail>
+                <h2>Bandit</h2>
+            </ion-item>
+            <ion-item>
+                <ion-thumbnail item-start>
+                    <img src="https://ionicframework.com/dist/preview-app/www/assets/img/thumbnail-kitten-2.jpg">
+                </ion-thumbnail>
+                <h2>Nala</h2>
+            </ion-item>
+        </ion-list>
+
+        <ion-list *ngSwitchCase="'Video'">
+            <ion-item>
+                <ion-thumbnail item-start>
+                    <img src="https://ionicframework.com/dist/preview-app/www/assets/img/thumbnail-duckling-1.jpg">
+                </ion-thumbnail>
+                <h2>Daffy</h2>
+            </ion-item>
+            <ion-item>
+                <ion-thumbnail item-start>
+                    <img src="https://ionicframework.com/dist/preview-app/www/assets/img/thumbnail-duckling-2.jpg">
+                </ion-thumbnail>
+                <h2>Huey</h2>
+            </ion-item>
+            <ion-item>
+                <ion-thumbnail item-start>
+                    <img src="https://ionicframework.com/dist/preview-app/www/assets/img/thumbnail-duckling-3.jpg">
+                </ion-thumbnail>
+                <h2>Dewey</h2>
+            </ion-item>
+            <ion-item>
+                <ion-thumbnail item-start>
+                    <img src="https://ionicframework.com/dist/preview-app/www/assets/img/thumbnail-duckling-4.jpg">
+                </ion-thumbnail>
+                <h2>Louie</h2>
+            </ion-item>
+        </ion-list>
+    </div>
+</ion-content>
+
